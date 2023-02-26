@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quiz</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="quiz.js"></script>
+	<style>
+		form {
+			width: 500px;
+			margin: auto;
+			padding: 20px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+		}
+
+		input[type="text"], input[type="email"] {
+			display: block;
+			width: 100%;
+			margin-bottom: 10px;
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+		}
+
+		label {
+			display: block;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+
+		.btn {
+			display: block;
+			padding: 10px 20px;
+			background-color: #4CAF50;
+			color: #fff;
+			text-align: center;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 16px;
+			margin-top: 10px;
+		}
+
+		.btn:hover {
+			background-color: #3e8e41;
+		}
+
+		.error {
+			color: red;
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+	<form id="quiz-form">
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" >
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" >
+		
+		<h2>Question 1:</h2>
+		<p>What is the capital of France?</p>
+		<input type="radio" id="q1-b" name="q1" value="b" required>
+		<label for="q1-b">A. London</label>
+		<input type="radio" id="q1-a" name="q1" value="a">
+		<label for="q1-a">B. Paris</label>
+		<input type="radio" id="q1-c" name="q1" value="c">
+		<label for="q1-c">C. Berlin</label>
+
+		<h2>Question 2:</h2>
+		<p>Which of the following are programming languages?</p>
+		<input type="checkbox" id="q2-a" name="q2-a" value="a">
+		<label for="q2-a">A. HTML</label>
+		<input type="checkbox" id="q2-b" name="q2-b" value="b">
+		<label for="q2-b">B. JavaScript</label>
+		<input type="checkbox" id="q2-c" name="q2-c" value="c">
+		<label for="q2-c">C. Python</label>
+		<input type="checkbox" id="q2-d" name="q2-d" value="d">
+		<label for="q2-d">D. CSS</label>
+
+        <h2>Question 3:</h2>
+		<p>What is the capital of Italy?</p>
+		<input type="text" id="q3" name="q3" required>
+
+		<button type="submit" class="btn">Submit</button>
+	</form>
+
+	<div id="result" style="display:none;">
+		<h2>Results</h2>
+		<p id="score"></p>
+	</div>
+</body>
+</html>
